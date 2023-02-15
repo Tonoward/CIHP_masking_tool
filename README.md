@@ -30,6 +30,10 @@ python3 --inpath <input_path> --outpath <output_path> <mask_item>
 
 At least one item to mask is needed for the script to run. It is possible to add multiple items
 
+### Option to dilate masks
+
+You can provide an amount of dilation for the resulting masks with the ```--dilation``` argument followed by an integer as dilation value
+
 # Example
 
 In this directory tree
