@@ -1,10 +1,6 @@
-# CIHP_masking_tool
-Script to generate masks of CIHP/LIP parsing images
-# Script for automatic mask generation of the desired body parts with CIHP Segmentation
+# Script for automatic mask generation of the desired parts with CIHP/LIP Segmentation
 
-This script is to quickly generate masks with the body parts selected. for more information on the parts available see
-
-[CIHP Parsing (Person Segmentation) Color Guide](https://www.notion.so/CIHP-Parsing-Person-Segmentation-Color-Guide-e0715b8d9db343ec999190d3e78f34ac)
+This script is to quickly generate masks with the selected items of the CIHP/LIP segmentation
 
 # Usage
 
@@ -38,13 +34,11 @@ At least one item to mask is needed for the script to run.
 
 In this directory tree
 
-> — ./
-> 
-> 
->      —masks
-> 
-> —image_files.png
-> 
+├── src
+│   ├── masks
+│   ├── imageToMask_1.png
+|   ├── ...
+|   ├── imageToMask_n.png
 
 **Example of input image**
 
