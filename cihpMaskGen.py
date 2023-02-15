@@ -30,6 +30,7 @@ def parseArguments():
     parser.add_argument("--leg_right", help="Right leg", action="store_true")
     parser.add_argument("--shoe_left", help="Left shoe", action="store_true")
     parser.add_argument("--shoe_right", help="Right shoe", action="store_true")
+    parser.add_argument("--dilation_val", help="Dilation value for the masks", type=int, default=5)
 
     # Print version
     parser.add_argument("--version", action="version", version='%(prog)s - Version 1.0')
@@ -40,8 +41,8 @@ def parseArguments():
     # Convert args to a dictionary
     checkArgsDict = vars(args)
 
-    # Remove the outpath and version from the dictionary
-    checkArgsDict = {k: checkArgsDict[k] for k in set(list(checkArgsDict.keys())) - set(['outpath', 'version'])}
+    # Remove unnecesary arguments from the dictionary
+    checkArgsDict = {k: checkArgsDict[k] for k in set(list(checkArgsDict.keys())) - set(['outpath', 'version', 'inpath', 'dilation_val'])}
 
     checkflag = False
 
@@ -110,12 +111,15 @@ if __name__ == '__main__':
     for (image_file) in os.listdir(args.inpath):
         if image_file.endswith(".png"):
             print(f"processing {i}th image...")
-            cv2.imwrite(os.path.join(args.outpath, Path(image_file).stem + "_mask.png"), process(os.path.join(args.inpath, image_file)))
+            processed_img = process(os.path.join(args.inpath, image_file))
+
+            # Optional dilation step
+            if args.dilation_val > 0:
+                # kernel for dilation
+                kernel = np.ones((args.dilation_val, args.dilation_val), np.uint8)
+                processed_img = cv2.dilate(processed_img, kernel, iterations=1)
+
+            cv2.imwrite(os.path.join(args.outpath, Path(image_file).stem + "_mask.png"), processed_img)
             i = i+1
     
     print(f"Done processing {i-1} images.")
-
-
-    
-
-    
