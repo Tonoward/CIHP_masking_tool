@@ -4,9 +4,9 @@ This script is to quickly generate masks with the selected items of the CIHP(Cro
 
 # Usage
 
-it takes as arguments the input path with a batch of images and a directory as output path, selected body part is added as arguments
+it takes as arguments the input path with a batch of images and a directory as output path, selected item(s) are added as arguments
 
-```jsx
+```
 python3 --inpath <input_path> --outpath <output_path> <mask_item>
 ```
 
@@ -28,7 +28,7 @@ python3 --inpath <input_path> --outpath <output_path> <mask_item>
 - —shoe_left
 - —shoe_right
 
-At least one item to mask is needed for the script to run.
+At least one item to mask is needed for the script to run. It is possible to add multiple items
 
 # Example
 
