@@ -34,15 +34,17 @@ At least one item to mask is needed for the script to run.
 
 In this directory tree
 
-├── src
-│   ├── masks
-│   ├── imageToMask_1.png
-|   ├── ...
-|   ├── imageToMask_n.png
+```
+src
+├── masks
+├── imageToMask_1.png
+├── ...
+├── imageToMask_n.png
+```
 
 **Example of input image**
 
-![test1sweater1_vis.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/16d0c67a-39fc-4213-a751-669a7af9a44b/test1sweater1_vis.png)
+![example_input_img](https://github.com/Tonoward/CIHP_masking_tool/blob/main/inputimg_example_1.png?raw=true)
 
 **Exampe script input**
 
@@ -50,6 +52,4 @@ In this directory tree
 
 **output**
 
-![test1sweater1_vis_mask.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/3856292d-ab28-4dee-95a6-7b29204cc5c5/test1sweater1_vis_mask.png)
-
-# Script
+![example_output_img](https://github.com/Tonoward/CIHP_masking_tool/blob/main/outputimg_example_1.png?raw=true)
