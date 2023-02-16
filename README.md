@@ -1,6 +1,10 @@
 # Script for automatic mask generation of the desired parts with CIHP/LIP Segmentation
 
-This script is to quickly generate masks with the selected items of the CIHP(Crowd Instance-level Human Parsing)/LIP(Look in person) segmentation
+This script is to quickly generate masks with the selected items of the CIHP(Crowd Instance-level Human Parsing)/LIP(Look into person) segmentation
+
+Some references:
+[Look into person](https://github.com/Engineering-Course/LIP_JPPNet)
+[CIHP parsing](https://github.com/Engineering-Course/CIHP_PGN)
 
 # Usage
 
