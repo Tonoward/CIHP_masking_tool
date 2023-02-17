@@ -11,7 +11,7 @@ def parseArguments():
     parser = argparse.ArgumentParser()
 
     # Required arguments
-    parser.add_argument("--inpath", help="The output path for the masks", type=str)
+    parser.add_argument("--inpath", help="The input path for the masks", type=str)
     parser.add_argument("--outpath", help="The output path for the masks", type=str)
 
     # Optional arguments
